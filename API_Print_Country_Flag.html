@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://restcountries.com/v3.1/all", true);
+        xhttp.send();
+        xhttp.onload = function () {
+            let countryDetails = JSON.parse(xhttp.responseText);
+            for (let index = 0; index < countryDetails.length; index++) {
+                console.log(countryDetails[index].flag);
+                
+            }
+        };
+    </script>
+</head>
+<body>
+
+</body>
+
+</html>
